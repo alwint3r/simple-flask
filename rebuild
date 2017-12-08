@@ -1,0 +1,6 @@
+#!/bin/bash
+
+docker stop espectro32_web && \
+docker rmi espectro32_flask && \
+docker build -t espectro32_flask . && \
+docker run -d --name espectro32_web -p 5000:5000 espectro32_flask
